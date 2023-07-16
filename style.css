@@ -11,14 +11,16 @@
 body {
   font-family: "Montserrat", sans-serif;
   background-color: lightgray;
+  margin: 0 auto;
 }
-.logo{
-    width: 200px;
-    height: 100px;
+.logo {
+  width: 200px;
+  height: 100px;
 }
 header {
   background: rgba(255, 144, 14, 0.1);
-  padding: 50px 240px;
+  padding: 50px 160px;
+  margin: 0 50px;
 }
 
 nav {
@@ -41,80 +43,102 @@ nav li a {
   color: #424242;
 }
 
-.nav-title {
-  color:  #131313;
+.section-title {
+  color: #131313;
   font-weight: 700;
   font-size: 2rem;
- 
+  padding: 20px;
 }
 
-.banner-content{
-    max-width: 800px;
-    text-align: center;
-    margin: 50px auto;
+.banner-content {
+  max-width: 800px;
+  text-align: center;
+  margin: 50px auto;
 }
 
-.banner-title{
-    font-size: 4rem;
-    font-weight: 700;
-    color: #131313;
-    margin-bottom: 10px;
+.banner-title {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #131313;
+  margin-bottom: 10px;
 }
 
 .banner-description {
-    color: #727272;
+  color: #727272;
 }
 
-.banner img{
-    width: 100%;
+.banner img {
+  width: 100%;
+  /* margin-top: 20px; */
 }
 
-.btn-primary{
-    border-radius: 8px;
-    background: #FF900E;
-    padding: 10px 30px;
-    margin: 20px 0;
-    border: 0;
-    color: #fff;
-    font-size: 1.2rem;
-    font-weight: 600;
-    cursor: pointer;
+.btn-primary {
+  border-radius: 8px;
+  background: #ff900e;
+  padding: 10px 30px;
+  margin: 20px 0;
+  border: 0;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
 }
 
-main{
-    max-width: 1440px;
-    margin: 0 auto;
+main {
+  max-width: 1440px;
+
+  margin: 0 auto;
 }
 
-.team-contianer{
+.team-contianer {
+  display: flex;
+  align-items: center;
+}
+
+.team-img {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.team-content {
+  padding: 0 70px;
+}
+
+.team-title {
+  font-size: 2.8rem;
+}
+
+.quick-list {
+  color: #727272;
+  font-weight: 500;
+}
+
+.text-features {
+  color: #ff900e;
+  font-weight: 700;
+}
+
+.team-description {
+  margin: 20px 0;
+}
+
+.fact-card-container{
     display: flex;
-    align-items: center;
+    justify-content: space-around;
 }
 
-.team-img{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+.fact-card-container .card {
+  border-radius: 8px;
+  border: 1px solid #ff900e;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
 }
 
-.team-content{
-    padding: 0 70px;
+.card-text{
+    margin: 10px 0;
 }
-
-.team-title{
-    font-size: 2.8rem;
-}
-
-.quick-list{
-    color: #727272;
-    font-weight: 500;
-}
-
-.text-features{
-    color: #FF900E;
-    font-weight: 700;
-}
-
 
 
 
@@ -135,49 +159,62 @@ main{
 /* responsiveness */
 
 @media screen and (max-width: 576px) {
-    .nav-title{
-        font-size: 1.2rem;
-    }
-    nav{
-        flex-direction: column;
-    }
-    nav > ul{
-        flex-direction: column;
-        margin: 20px auto;
-    }
-    nav > ul > li{
-        margin-top: 20px;
+  .nav-title {
+    font-size: 1.2rem;
+  }
+  nav,
+  .team-contianer {
+    flex-direction: column;
+  }
+  nav > ul {
+    flex-direction: column;
+    margin: 20px auto;
+  }
+  nav > ul > li {
+    margin-top: 20px;
+  }
+  header {
+    padding: 20px;
+  }
 
-    }
-    header{
-        padding: 20px;
-    }
+  .banner-title {
+    font-size: 1rem;
+  }
 
-    .banner-title{
-        font-size: 1rem;
-    }
+  .team-img {
+    grid-template-columns: 1fr;
+  }
+  .team-content {
+    margin-top: 20px;
+    padding: 0 30px;
+  }
 }
 
-@media screen and (min-width:576px) and (max-width: 960px){
-    .nav-title{
-        font-size: 3rem;
-    }
-    nav{
-        flex-direction: column;
-    }
-    nav > ul{
-        flex-direction: column;
-        margin: 20px auto;
-    }
-    nav > ul > li{
-        margin-top: 20px;
+@media screen and (min-width: 576px) and (max-width: 960px) {
+  .nav-title {
+    font-size: 3rem;
+  }
+  nav,
+  .team-contianer {
+    flex-direction: column;
+  }
+  nav > ul {
+    flex-direction: column;
+    margin: 20px auto;
+  }
+  nav > ul > li {
+    margin-top: 20px;
+  }
+  header {
+    padding: 20px;
+  }
 
-    }
-    header{
-        padding: 20px;
-    }
+  .banner-title {
+    font-size: 2rem;
+  }
 
-    .banner-title{
-        font-size: 2rem;
-    }
+  .team-content {
+    margin-top: 20px;
+    padding: 0 30px;
+  }
 }
